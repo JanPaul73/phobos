@@ -1,5 +1,5 @@
 #for target gh-pages
-GH_PAGES_SOURCES = source *.py
+GH_PAGES_SOURCES =Makefile source *.py
 
 # Makefile for Sphinx documentation
 #
