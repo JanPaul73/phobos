@@ -2,54 +2,136 @@
 
 Sensors:
     RaySensor:
-        width: 144
-        height: 1
-        opening_width: &0.5*math.pi&
-        opening_height: &0.5*math.pi&
-        maxDistance: 100
+        width:
+            default: 144
+            required: True
+        height:
+            default: 1
+            required: True
+        opening_width:
+            default: &0.5*math.pi&
+            required: True
+        opening_height:
+            default: &0.5*math.pi&
+            required: True
+        maxDistance:
+            default: 100
+            required: True
     RotatingRaySensor:
-        bands: 16
-        lasers: 32
-        maxDistance: 100.0
-        draw_rays: True
-        horizontal_resolution: &(1/180)*math.pi&
-        horizontal_offset:  0.0
-        vertical_offset:  0.0
+        bands:
+            default: 16
+            required: True
+        lasers:
+            default: 32
+            required: True
+        maxDistance:
+            default: 100.0
+            required: True
+        draw_rays:
+            default: True
+            required: True
+        horizontal_resolution:
+            default: &(1/180)*math.pi&
+            required: True
+        horizontal_offset:
+            default: 0.0
+            required: True
+        vertical_offset:
+            default: 0.0
+            required: True
     CameraSensor:
-        width: 640
-        height: 480
-        show_cam: True
-        opening_width: 90
-        opening_height: 90
-        hud_pos: 0
-        hud_width: 320
-        hud_height: 240
-        depthImage: False
+        width:
+            default: 640
+            required: True
+        height:
+            default: 480
+            required: True
+        show_cam:
+            default: True
+            required: True
+        opening_width:
+            default: 90
+            required: True
+        opening_height:
+            default: 90
+            required: True
+        hud_pos:
+            default: 0
+            required: True
+        hud_width:
+            default: 320
+            required: True
+        hud_height:
+            default: 240
+            required: True
+        depthImage:
+            default: False
+            required: True
     ScanningSonar:
-        width: 64
-        height: 512
-        resolution: 0.1
-        maxDist: 100.0
-        hud_pos: 0
-        updateRate: 10
-        gain: 1
-        show_cam: False
-        only_ray: False
+        width:
+            default: 64
+            required: True
+        height:
+            default: 512
+            required: True
+        resolution:
+            default: 0.1
+            required: True
+        maxDist:
+            default: 100.0
+            required: True
+        hud_pos:
+            default: 0
+            required: True
+        updateRate:
+            default: 10
+            required: True
+        gain:
+            default: 1
+            required: True
+        show_cam:
+            default: False
+            required: True
+        only_ray:
+            default: False
+            required: True
         extension:
-            - 0.010000
-            - 0.004000
-            - 0.004000
-        left_limit: &math.pi&
-        right_limit: &(-1)*math.pi&
-        ping_pong_mode: False
+            default:
+                - 0.010000
+                - 0.004000
+                - 0.004000
+            required: True
+        left_limit:
+            default: &math.pi&
+            required: True
+        right_limit:
+            default: &(-1)*math.pi&
+            required: True
+        ping_pong_mode:
+            default: False
+            required: True
     MultiLevelLaserRangeFinder:
-        numRaysVertical: 32
-        numRaysHorizontal: 1900
-        rttResolutionX:  512 # 128*4
-        rttResolutionY:  256 # 128 * 2
-        verticalOpeningAngle: &40/180.0 * math.pi&
-        horizontalOpeningAngle: &2*math.pi*1899/ 1900&
-        maxDistance:  100.0
+        numRaysVertical:
+            default: 32
+            required: True
+        numRaysHorizontal:
+            default: 1900
+            required: True
+        rttResolutionX:
+            default: 512
+            required: True
+        rttResolutionY:
+            default: 256
+            required: True
+        verticalOpeningAngle:
+            default: &40/180.0 * math.pi&
+            required: True
+        horizontalOpeningAngle:
+            default: &2*math.pi*1899/ 1900&
+            required: True
+        maxDistance:
+            default: 100.0
+            required: True
     JointPosition:
     JointVelocity:
     JointLoad:
